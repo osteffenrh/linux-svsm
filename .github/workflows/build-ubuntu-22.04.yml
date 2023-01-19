@@ -1,0 +1,19 @@
+name: "Build (Ubuntu 22.04)"
+
+on: [push]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    name: "Build"
+    runs-on: ubunut-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly
+          override: true
+          profile: minimal
+      - run: build-ubuntu-22.04.sh
