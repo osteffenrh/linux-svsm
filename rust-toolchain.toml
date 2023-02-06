@@ -1,3 +1,4 @@
 [toolchain]
-channel = "nightly"
+# Pin rust nightly to 1.69.0-nightly
+channel = "nightly-2023-01-31"
 targets = ["x86_64-unknown-none"]
